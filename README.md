@@ -25,14 +25,14 @@ Once you have completed your work, send us a link to your public repository.
 
 Good luck!
 
-##Comments and Notes
+## Comments and Notes
 
 There are a few parts that I am not entirely happy with and would like to improve given further time:
-Passing NotificationService by reference into Account.Withdraw means that Account needs to be aware of NotificationService
-The test methods create accounts each time which makes it harder to read what the code is actually doing
-The MockAccountRepository.GetAccountById should do a deep copy of the account (possibly using reflection) so when additional properties are added to Account, they are copied as well
-The MockAccountRepository.Update should be updated as above
+* Passing NotificationService by reference into Account.Withdraw means that Account needs to be aware of NotificationService
+* The test methods create accounts each time which makes it harder to read what the code is actually doing
+* The MockAccountRepository.GetAccountById should do a deep copy of the account (possibly using reflection) so when additional properties are added to Account, they are copied as well
+* The MockAccountRepository.Update should be updated as above
 
 In addition, I have noticed the following which would need verifying this against the spec/product owner.
-Amounts can be negative - which doesn't seem right
-Account.Withdrawn is negative where I was expecting it to be positive
+* Amounts can be negative - which doesn't seem right
+* Account.Withdrawn is negative where I was expecting it to be positive
