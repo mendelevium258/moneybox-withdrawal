@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moneybox.App", "Moneybox.App\Moneybox.App.csproj", "{C1E5082E-45D6-469C-BD08-B87348851443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moneybox.test", "Moneybox.test\Moneybox.test.csproj", "{C18FB95B-88B6-417F-AA46-1E453460D47B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moneybox.test", "Moneybox.test\Moneybox.test.csproj", "{C18FB95B-88B6-417F-AA46-1E453460D47B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moneybox2.test", "Moneybox2.test\Moneybox2.test.csproj", "{8F2EBA3E-CE92-4773-8314-657242FD30C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C18FB95B-88B6-417F-AA46-1E453460D47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C18FB95B-88B6-417F-AA46-1E453460D47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C18FB95B-88B6-417F-AA46-1E453460D47B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F2EBA3E-CE92-4773-8314-657242FD30C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F2EBA3E-CE92-4773-8314-657242FD30C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F2EBA3E-CE92-4773-8314-657242FD30C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F2EBA3E-CE92-4773-8314-657242FD30C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
