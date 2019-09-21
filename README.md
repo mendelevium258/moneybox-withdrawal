@@ -36,3 +36,10 @@ There are a few parts that I am not entirely happy with and would like to improv
 In addition, I have noticed the following which would need verifying this against the spec/product owner.
 * Amounts can be negative - which doesn't seem right
 * Account.Withdrawn is negative where I was expecting it to be positive
+
+## Comments and notes having looked at the other solutions
+
+Having looked at the solutions that other people have posted, I have also made the following changes as I believe they enhance my solution
+* Used Moq to mock all of the methods
+* Switched the unit test to NUnit, which allows parameterised tests
+* Changed the permissions of the Account and User classes to prevent updates
