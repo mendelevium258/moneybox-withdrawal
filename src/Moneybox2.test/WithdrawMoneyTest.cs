@@ -34,17 +34,13 @@ namespace Tests
             var emailAddress = "test@example.com";
 
             //Arrange
-            accountRepositoryMock.Setup(x => x.GetAccountById(FromAccountGuid)).Returns(new Account
-            {
-                Id = FromAccountGuid,
-                Balance = startBalance,
-                PaidIn = 0m,
-                Withdrawn = 0m,
-                User = new User()
-                {
-                    Email = emailAddress
-                }
-            });
+            accountRepositoryMock.Setup(x => x.GetAccountById(FromAccountGuid)).Returns(new Account(
+                id: FromAccountGuid,
+                user: new User(
+                    email: emailAddress
+                ),
+                balance: startBalance
+            ));
 
             var withdrawMoney = new WithdrawMoney(accountRepositoryMock.Object, notificationServiceMock.Object);
 
@@ -62,16 +58,13 @@ namespace Tests
             var emailAddress = "test0@example.com";
 
             //Arrange
-            accountRepositoryMock.Setup(x => x.GetAccountById(FromAccountGuid)).Returns(new Account
-            {
-                Id = FromAccountGuid,
-                Balance = startBalance,
-                Withdrawn = 0m,
-                User = new User
-                {
-                    Email = emailAddress
-                }
-            });
+            accountRepositoryMock.Setup(x => x.GetAccountById(FromAccountGuid)).Returns(new Account(
+                id: FromAccountGuid,
+                balance: startBalance,
+                user: new User(
+                    email: emailAddress
+                )
+            ));
 
             var withdrawMoney = new WithdrawMoney(accountRepositoryMock.Object, notificationServiceMock.Object);
 

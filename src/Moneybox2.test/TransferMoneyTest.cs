@@ -35,27 +35,21 @@ namespace Tests
 
             //Arrange
             accountRepositoryMock.Setup(x => x.GetAccountById(FromAccountGuid)).Returns(new Account
-            {
-                Id = FromAccountGuid,
-                Balance = startBalanceFrom,
-                PaidIn = 0m,
-                Withdrawn = 0m,
-                User = new User()
-                {
-                    Email = emailAddressFrom
-                }
-            });
-            accountRepositoryMock.Setup(x => x.GetAccountById(ToAccountGuid)).Returns(new Account
-            {
-                Id = ToAccountGuid,
-                Balance = startBalanceTo,
-                PaidIn = paidInTo,
-                Withdrawn = 0m,
-                User = new User()
-                {
-                    Email = emailAddressTo
-                }
-            });
+            (
+                id: FromAccountGuid,
+                balance: startBalanceFrom,
+                user: new User(
+                    email: emailAddressFrom
+                )
+            ));
+            accountRepositoryMock.Setup(x => x.GetAccountById(ToAccountGuid)).Returns(new Account(
+                id: ToAccountGuid,
+                balance: startBalanceTo,
+                paidIn: paidInTo,
+                user: new User(
+                    email: emailAddressTo
+                )
+            ));
 
             var transferMoney = new TransferMoney(accountRepositoryMock.Object, notificationServiceMock.Object);
 
@@ -75,28 +69,21 @@ namespace Tests
             var emailAddressTo = "to@example.com";
 
             //Arrange
-            accountRepositoryMock.Setup(x => x.GetAccountById(FromAccountGuid)).Returns(new Account
-            {
-                Id = FromAccountGuid,
-                Balance = startBalanceFrom,
-                PaidIn = 0m,
-                Withdrawn = 0m,
-                User = new User()
-                {
-                    Email = emailAddressFrom
-                }
-            });
-            accountRepositoryMock.Setup(x => x.GetAccountById(ToAccountGuid)).Returns(new Account
-            {
-                Id = ToAccountGuid,
-                Balance = startBalanceTo,
-                PaidIn = paidInTo,
-                Withdrawn = 0m,
-                User = new User()
-                {
-                    Email = emailAddressTo
-                }
-            });
+            accountRepositoryMock.Setup(x => x.GetAccountById(FromAccountGuid)).Returns(new Account(
+                id: FromAccountGuid,
+                balance: startBalanceFrom,
+                user: new User(
+                    email: emailAddressFrom
+                )
+            ));
+            accountRepositoryMock.Setup(x => x.GetAccountById(ToAccountGuid)).Returns(new Account(
+                id: ToAccountGuid,
+                balance: startBalanceTo,
+                paidIn: paidInTo,
+                user: new User(
+                    email: emailAddressTo
+                )
+            ));
 
             var transferMoney = new TransferMoney(accountRepositoryMock.Object, notificationServiceMock.Object);
 
@@ -117,28 +104,21 @@ namespace Tests
             var emailAddressTo = "to@example.com";
 
             //Arrange
-            accountRepositoryMock.Setup(x => x.GetAccountById(FromAccountGuid)).Returns(new Account
-            {
-                Id = FromAccountGuid,
-                Balance = startBalanceFrom,
-                PaidIn = 0m,
-                Withdrawn = 0m,
-                User = new User()
-                {
-                    Email = emailAddressFrom
-                }
-            });
-            accountRepositoryMock.Setup(x => x.GetAccountById(ToAccountGuid)).Returns(new Account
-            {
-                Id = ToAccountGuid,
-                Balance = startBalanceTo,
-                PaidIn = paidInTo,
-                Withdrawn = 0m,
-                User = new User()
-                {
-                    Email = emailAddressTo
-                }
-            });
+            accountRepositoryMock.Setup(x => x.GetAccountById(FromAccountGuid)).Returns(new Account(
+                id: FromAccountGuid,
+                balance: startBalanceFrom,
+                user: new User(
+                    email: emailAddressFrom
+                )
+            ));
+            accountRepositoryMock.Setup(x => x.GetAccountById(ToAccountGuid)).Returns(new Account(
+                id: ToAccountGuid,
+                balance: startBalanceTo,
+                paidIn: paidInTo,
+                user: new User(
+                    email: emailAddressTo
+                )
+            ));
 
             var transferMoney = new TransferMoney(accountRepositoryMock.Object, notificationServiceMock.Object);
 

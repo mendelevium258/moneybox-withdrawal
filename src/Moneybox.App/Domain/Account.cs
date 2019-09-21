@@ -7,19 +7,26 @@ namespace Moneybox.App
     {
         public const decimal PayInLimit = 4000m;
 
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
 
-        public User User { get; set; }
+        public User User { get; private set; }
 
-        public decimal Balance { get; set; }
+        public decimal Balance { get; private set; }
 
-        public decimal Withdrawn { get; set; }
+        public decimal Withdrawn { get; private set; }
 
-        public decimal PaidIn { get; set; }
+        public decimal PaidIn { get; private set; }
 
+        public Account(Guid id, User user, decimal balance = 0, decimal withdrawn = 0, decimal paidIn = 0)
+        {
+            Id = id;
+            User = user;
+            Balance = balance;
+            Withdrawn = withdrawn;
+            PaidIn = paidIn;
+        }
         public void Withdraw(decimal amount, ref INotificationService notificationService)
         {
-
             var fromBalance = this.Balance - amount;
             if (fromBalance < 0m)
             {
